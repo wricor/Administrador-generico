@@ -35,7 +35,7 @@ function save_edit(e){
 				$.post("../email/c_email.php?op=send_new", { gene01correopers: gene01correopers}, function(data){
 				});
 			}
-			// $('#user_form')[0].reset();
+			$('#user_form')[0].reset();
 		}
 	}); 
 }

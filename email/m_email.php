@@ -28,8 +28,8 @@ class Email extends PHPMailer{
 		$url = $App->mainRoute.'external/change_pass.php?gene01correopers='.$correo["gene01correopers"].'&gene01token='.$correo["gene01token"];
 		$mail = new PHPMailer(true);
 		$this->IsSMTP();
-		$this->Host=$app->mailHost;
-		$this->Port=$app->mailPort;
+		$this->Host=$App->mailHost;
+		$this->Port=$App->mailPort;
 		$this->SMTPAuth=true;
 		$this->Username=$App->mailUser;
 		$this->Password=$App->mailPass;
@@ -57,8 +57,8 @@ class Email extends PHPMailer{
 		$pass = $correo["gene01clave"];
 		$mail = new PHPMailer(true);
 		$this->IsSMTP();
-		$this->Host=$app->mailHost;
-		$this->Port=$app->mailPort;
+		$this->Host=$App->mailHost;
+		$this->Port=$App->mailPort;
 		$this->SMTPAuth=true;
 		$this->Username=$App->mailUser;
 		$this->Password=$App->mailPass;
@@ -86,8 +86,8 @@ class Email extends PHPMailer{
 		$url = $App->mainRoute.'external/change_pass.php?gene01correopers='.$correo["gene01correopers"].'&gene01token='.$correo["gene01token"];
 		$mail = new PHPMailer(true);
 		$this->IsSMTP();
-		$this->Host=$app->mailHost;
-		$this->Port=$app->mailPort;
+		$this->Host=$App->mailHost;
+		$this->Port=$App->mailPort;
 		$this->SMTPAuth=true;
 		$this->Username=$App->mailUser;
 		$this->Password=$App->mailPass;
