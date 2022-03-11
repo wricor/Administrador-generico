@@ -1,5 +1,21 @@
+<?php
+/**
+**********************************************************************
+* @author William Jammirlhey Rico Ruiz <webmaster@williamrico.com>
+* @date Monday, March 07, 2022
+* @file home/index.php
+* @version 0.1
+***********************************************************************/
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+if (!isset($_SESSION)){
+    session_start();
+}
+require '../config/conection.php';
+if(isset($_SESSION["gene01id"])){
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<title>Inicio - Aplicación</title>
@@ -10,7 +26,9 @@
 	<!-- Site wrapper -->
 	<div class="wrapper">
 		<?php
+			// Barra superior de la página
 			require '../general/navbar.php';
+			// Parte superior lateral del menú
 			require '../general/sidebar.php';
 		?>
 		<!-- Content Wrapper. Contains page content -->
@@ -20,14 +38,14 @@
 				<div class="container-fluid">
 					<div class="row mb-2">
 						<div class="col-sm-6">
-							<h1>Blank Page</h1>
+							<h1>Contenido del sitio <small>Wricor</small></h1>
 						</div>
-						<div class="col-sm-6">
+						<!-- <div class="col-sm-6">
 							<ol class="breadcrumb float-sm-right">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
 								<li class="breadcrumb-item active">Blank Page</li>
 							</ol>
-						</div>
+						</div> -->
 					</div>
 				</div><!-- /.container-fluid -->
 			</section>
@@ -36,7 +54,7 @@
 			<section class="content">
 
 				<!-- Default box -->
-				<div class="card">
+				<!-- <div class="card">
 					<div class="card-header">
 						<h3 class="card-title">Title</h3>
 
@@ -52,12 +70,10 @@
 					<div class="card-body">
 						Start creating your amazing application!
 					</div>
-					<!-- /.card-body -->
 					<div class="card-footer">
 						Footer
 					</div>
-					<!-- /.card-footer-->
-				</div>
+				</div> -->
 				<!-- /.card -->
 
 			</section>
@@ -78,3 +94,8 @@
 </body>
 
 </html>
+<?php
+} else {
+    header("Location:../external/index.php");
+}
+?>
