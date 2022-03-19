@@ -41,7 +41,7 @@ function fecha_actual(){
 
 function obtiene_tablas(){
 	$tablas=array();
-	require '../app.php';
+	require '../config/app.php';
 	$conect=new Conect($App->dbhost, $App->dbuser, $App->dbpass, $App->dbname);
 	$conect->conection();
 	$sql = 'SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE table_schema='.$App->dbname;
@@ -58,7 +58,7 @@ function obtiene_tablas(){
 
 function obtiene_campos($tabla){
 	$campos=array();
-	require '../app.php';
+	require '../config/app.php';
 	$conect=new Conect($App->dbhost, $App->dbuser, $App->dbpass, $App->dbname);
 	$conect->conection();
 	$sql = 'SHOW COLUMNS FROM '.$tabla;
@@ -94,7 +94,7 @@ function modal_texto($campo){
 }
 
 function obtiene_opciones($campo){
-	require '../../app.php';
+	require '../config/app.php';
 	$conect=new Conect($App->dbhost, $App->dbuser, $App->dbpass, $App->dbname);
 	$conect->conection();
 	$raiz=substr($campo,0,6);
@@ -115,7 +115,7 @@ function obtiene_sino(){
 }
 
 function obtiene_opciones_tercero($campo){
-	require '../../app.php';
+	require '../config/app.php';
 	$conect=new Conect($App->dbhost, $App->dbuser, $App->dbpass, $App->dbname);
 	$conect->conection();
 	$raiz=substr($campo,0,6);
@@ -163,7 +163,7 @@ function get_campos($gene10nombre){
 }
 
 function get_info($gene02id){
-	require '../app.php';
+	require '../config/app.php';
 	$conect=new Conect($App->dbhost, $App->dbuser, $App->dbpass, $App->dbname);
 	$conect->conection();
 	$info=array();
