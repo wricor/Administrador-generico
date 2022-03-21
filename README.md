@@ -1,15 +1,42 @@
-# Administrador genérico
+# Administrador Genérico
 
-Este administrador es la primera parte de una aplicación web, que contiene los elementos básicos para realizar un desarrollo ágil sin preocuparse por el módulo de ingreso. Únicamente basta con descargar los archivos, configurar de acuerdo con las necesidades y utilizar.
+Para la gran mayoría de las personas que quieren tener una aplicación web, es necesario contar con un administrador que permita gestionar el ingreso, registro de usuarios nuevos y olvido de contraseña, lo cual nos toma bastante tiempo para llevar a cabo.
+
+El administrador presentado a continuación permite obtener la primera parte de una aplicación web, con los elementos básicos para realizar un desarrollo ágil sin preocuparse por el módulo de externo de cara al usuario final. Únicamente basta con descargar los archivos, configurar de acuerdo con las necesidades y utilizar.
 
 La base del código del admistrador es AdminLTE y se han realizado modificaciones para añadirle funcionalidad con los lenguajes de programación PHP y Javascript.
 
 ## Estructura
 
 El sistema cuenta con los siguientes elementos:
-- Login
-- Registro
-- Olvido de contraseña
+
+### Ingreso
+Valida la identificación del usuario mediante el correo electrónico y la contraseña.- Registro
+
+![](https://williamrico.com/img/admin/login.png)
+
+### Registro
+Se digitan los datos requeridos para crear un usuario nuevo. Luego de esto llega un correo al usuario para realizar el ingreso.
+
+![](https://williamrico.com/img/admin/signup.png)
+
+![](https://williamrico.com/img/admin/created_user.png)
+
+### Olvido de contraseña
+Es necesario que el usuario ingrese su correo electrónico, al cual llega un mensaje para que pueda realizar el cambio.
+
+![](https://williamrico.com/img/admin/reminder.png)
+
+![](https://williamrico.com/img/admin/send_reminder.png)
+
+![](https://williamrico.com/img/admin/change_password.png)
+
+![](https://williamrico.com/img/admin/changed_password.png)
+
+### Página principal al interior de la aplicación
+Esta página es la que visualiza el usuario una vez haya superado la verificación inicial.
+
+![](https://williamrico.com/img/admin/home_page.png)
 
 ## Carpetas
 
@@ -80,7 +107,3 @@ CREATE TABLE `gene01tercero` (
 ALTER TABLE `gene01tercero`
   ADD PRIMARY KEY (`gene01id`);
 ```
-
-
-<!-- Subida de imagenes (debe ser de internet) -->
-<!-- ![](Dirección de la imagen) -->
